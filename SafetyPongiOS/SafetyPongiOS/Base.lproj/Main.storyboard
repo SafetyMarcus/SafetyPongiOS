@@ -5,67 +5,30 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Players-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ufa-kH-Wwx">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <prototypes>
-                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Tsc-dw-UOr">
-                            <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tsc-dw-UOr" id="Li1-td-JRG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </tableViewCellContentView>
-                        </tableViewCell>
-                    </prototypes>
-                </tableView>
-                <viewController id="9pv-A4-QxB" customClass="PlayersTableViewController" customModule="SafetyPongiOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
-                    <connections>
-                        <outlet property="playersTable" destination="ufa-kH-Wwx" id="BfZ-5j-Hhj"/>
-                    </connections>
+                <viewController title="Players" id="9pv-A4-QxB" customClass="PlayersTableViewController" customModule="SafetyPongiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Players" image="first" id="acW-dT-cKf"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="872" y="-292"/>
         </scene>
-        <!--Second-->
+        <!--Games-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="GamesTableViewController" customModule="SafetyPongiOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
-                    <connections>
-                        <outlet property="gamesTable" destination="Ujs-gh-4ni" id="9aR-fK-rmK"/>
-                        <outlet property="tableView" destination="Ujs-gh-4ni" id="6tC-jd-Tmv"/>
-                    </connections>
+                <viewController title="Games" id="8rJ-Kc-sve" customClass="GamesTableViewController" customModule="SafetyPongiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Games" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ujs-gh-4ni">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <prototypes>
-                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZOh-YV-upJ">
-                            <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZOh-YV-upJ" id="H12-SN-oPb">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </tableViewCellContentView>
-                        </tableViewCell>
-                    </prototypes>
-                </tableView>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="867" y="968"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--SafetyPong-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController title="SafetyPong" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
