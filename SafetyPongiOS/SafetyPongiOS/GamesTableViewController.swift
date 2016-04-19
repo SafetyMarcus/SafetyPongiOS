@@ -11,6 +11,14 @@ import UIKit
 
 class GamesTableViewController: UITableViewController
 {
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        let height = UIApplication.sharedApplication().statusBarFrame.height
+        self.tableView.contentInset = UIEdgeInsetsMake(height, 0, 0, 0)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 40/255.0, green: 159/255.0, blue: 215/255.0, alpha: 1)
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
