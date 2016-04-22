@@ -24,11 +24,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Item-->
+        <!--Games-->
         <scene sceneID="yYh-8p-JQq">
             <objects>
                 <navigationController id="1L9-zc-yG0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Rn8-4Z-5mr"/>
+                    <tabBarItem key="tabBarItem" title="Games" image="second" id="Rn8-4Z-5mr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ci1-Vx-Mh5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="209" y="701"/>
         </scene>
-        <!--Games Table View Controller-->
+        <!--Games-->
         <scene sceneID="Ars-fL-wbD">
             <objects>
                 <tableViewController id="cAU-yv-NBf" customClass="GamesTableViewController" customModule="SafetyPongiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,17 +64,48 @@
                             <outlet property="delegate" destination="cAU-yv-NBf" id="FCN-lK-0EX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uQC-o5-jXd"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Games" id="uQC-o5-jXd">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7LX-mH-fs9">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="New" id="Rdy-3O-FvW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="mxk-Gz-vOY" kind="show" id="uaa-vB-M38"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arV-Rf-WkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="851" y="714"/>
         </scene>
-        <!--Item-->
+        <!--New Game-->
+        <scene sceneID="JOV-2a-sIz">
+            <objects>
+                <viewController title="New Game" id="mxk-Gz-vOY" customClass="NewGameViewController" customModule="SafetyPongiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oyz-uo-573"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ry-pt-T9H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ae8-cY-Uy9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Game" id="3Xm-hZ-o8a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAR-BW-rFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="714"/>
+        </scene>
+        <!--Players-->
         <scene sceneID="6hK-Ag-1Lf">
             <objects>
                 <navigationController id="yog-ZO-0PE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="DEG-xy-95S"/>
+                    <tabBarItem key="tabBarItem" title="Players" image="first" id="DEG-xy-95S"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="37w-kb-RDW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -87,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="39" y="-750"/>
         </scene>
-        <!--Item-->
+        <!--Players-->
         <scene sceneID="wAY-G7-BWD">
             <objects>
                 <tableViewController id="3pD-Wm-LCZ" customClass="PlayersTableViewController" customModule="SafetyPongiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,12 +141,16 @@
                             <outlet property="delegate" destination="3pD-Wm-LCZ" id="8fN-oL-2lY"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="g01-fM-2VW"/>
-                    <navigationItem key="navigationItem" id="2ZP-dI-tTf"/>
+                    <tabBarItem key="tabBarItem" title="Players" image="first" id="g01-fM-2VW"/>
+                    <navigationItem key="navigationItem" title="Players" id="2ZP-dI-tTf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAE-fG-luv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="711" y="-66"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
 </document>
