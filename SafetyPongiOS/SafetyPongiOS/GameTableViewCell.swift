@@ -12,7 +12,6 @@ import UIKit
 class GameTableViewCell: UITableViewCell
 {
     @IBOutlet weak var playerOne: UILabel!
-    @IBOutlet weak var playerOneScore: UILabel!
     @IBOutlet weak var playerTwo: UILabel!
-    @IBOutlet weak var playerTwoScore: UILabel!
+    @IBOutlet weak var scores: UILabel!
 }

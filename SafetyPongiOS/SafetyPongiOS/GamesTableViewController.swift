@@ -38,9 +38,8 @@ class GamesTableViewController: UITableViewController
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! GameTableViewCell
         cell.playerOne.text = "Player One"
-        cell.playerOneScore.text = "21"
         cell.playerTwo.text = "Player Two"
-        cell.playerTwoScore.text = "15"
+        cell.scores.text = "21 - 15"
         
         return cell
     }

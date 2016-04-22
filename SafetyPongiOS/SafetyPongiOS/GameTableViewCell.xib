@@ -12,62 +12,43 @@
             <rect key="frame" x="0.0" y="0.0" width="501" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mK7-dn-n4w" id="Wgy-fQ-2j2">
-                <rect key="frame" x="0.0" y="0.0" width="501" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="501" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdC-FA-TZP">
-                        <rect key="frame" x="8" y="11" width="83" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rf4-MH-wck">
-                        <rect key="frame" x="233" y="11" width="35" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Two" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbh-rb-Ovt">
-                        <rect key="frame" x="410" y="11" width="83" height="21"/>
+                        <rect key="frame" x="309" y="11" width="184" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4K-WQ-RL7">
-                        <rect key="frame" x="268" y="11" width="18" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="18" id="Qgd-3L-Hbm"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Player One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdC-FA-TZP">
+                        <rect key="frame" x="8" y="11" width="193" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGM-Sa-TS6">
-                        <rect key="frame" x="215" y="11" width="18" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 - 21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jn-Kl-VZD">
+                        <rect key="frame" x="224" y="11" width="52" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="qbh-rb-Ovt" secondAttribute="trailing" id="DNs-4c-1MQ"/>
-                    <constraint firstItem="m4K-WQ-RL7" firstAttribute="baseline" secondItem="rf4-MH-wck" secondAttribute="baseline" id="Kvv-jO-3TG"/>
+                    <constraint firstItem="qbh-rb-Ovt" firstAttribute="trailing" secondItem="Wgy-fQ-2j2" secondAttribute="trailingMargin" id="3rP-G5-TAC"/>
+                    <constraint firstItem="qbh-rb-Ovt" firstAttribute="leading" secondItem="7jn-Kl-VZD" secondAttribute="trailing" constant="33" id="DzT-hC-Uej"/>
+                    <constraint firstItem="qbh-rb-Ovt" firstAttribute="baseline" secondItem="7jn-Kl-VZD" secondAttribute="baseline" id="Gc0-Q3-z16"/>
+                    <constraint firstItem="7jn-Kl-VZD" firstAttribute="leading" secondItem="qdC-FA-TZP" secondAttribute="trailing" constant="23" id="L4O-ru-9yx"/>
+                    <constraint firstItem="7jn-Kl-VZD" firstAttribute="centerX" secondItem="Wgy-fQ-2j2" secondAttribute="centerX" id="QG3-ci-ZlJ"/>
                     <constraint firstAttribute="leadingMargin" secondItem="qdC-FA-TZP" secondAttribute="leading" id="Qmy-XY-Mpn"/>
-                    <constraint firstAttribute="trailing" secondItem="m4K-WQ-RL7" secondAttribute="trailing" constant="215" id="VHn-rk-v8i"/>
-                    <constraint firstItem="VGM-Sa-TS6" firstAttribute="leading" secondItem="qdC-FA-TZP" secondAttribute="trailing" constant="124" id="YCC-oq-wvZ"/>
-                    <constraint firstItem="m4K-WQ-RL7" firstAttribute="leading" secondItem="rf4-MH-wck" secondAttribute="trailing" id="cPE-qM-fUV"/>
-                    <constraint firstItem="qbh-rb-Ovt" firstAttribute="top" secondItem="Wgy-fQ-2j2" secondAttribute="topMargin" constant="3" id="d3d-T1-vvO"/>
-                    <constraint firstItem="rf4-MH-wck" firstAttribute="top" secondItem="Wgy-fQ-2j2" secondAttribute="topMargin" constant="3" id="dbb-5S-V2Y"/>
-                    <constraint firstItem="rf4-MH-wck" firstAttribute="leading" secondItem="VGM-Sa-TS6" secondAttribute="trailing" id="eH3-6E-0kX"/>
-                    <constraint firstItem="VGM-Sa-TS6" firstAttribute="top" secondItem="Wgy-fQ-2j2" secondAttribute="topMargin" constant="3" id="o7V-Yv-j2f"/>
+                    <constraint firstItem="7jn-Kl-VZD" firstAttribute="centerY" secondItem="Wgy-fQ-2j2" secondAttribute="centerY" id="dCL-TT-Cfi"/>
                     <constraint firstItem="qdC-FA-TZP" firstAttribute="top" secondItem="Wgy-fQ-2j2" secondAttribute="topMargin" constant="3" id="oSl-3R-O5g"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="playerOne" destination="qdC-FA-TZP" id="Pr7-R8-axy"/>
-                <outlet property="playerOneScore" destination="VGM-Sa-TS6" id="a51-6F-atq"/>
-                <outlet property="playerTwo" destination="qbh-rb-Ovt" id="cj1-Tl-28k"/>
-                <outlet property="playerTwoScore" destination="m4K-WQ-RL7" id="tx2-I6-T8D"/>
+                <outlet property="playerTwo" destination="qbh-rb-Ovt" id="nLU-SE-o0f"/>
+                <outlet property="scores" destination="7jn-Kl-VZD" id="v0M-ay-eMd"/>
             </connections>
             <point key="canvasLocation" x="420.5" y="419"/>
         </tableViewCell>
