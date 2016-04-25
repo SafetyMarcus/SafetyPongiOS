@@ -11,6 +11,9 @@ import UIKit
 
 class GamesTableViewController: UITableViewController
 {
+    let sandpitKey = "da550478-0119-4e0c-b892-29f60e932293"
+    var games = [Game]()
+    
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
@@ -18,6 +21,21 @@ class GamesTableViewController: UITableViewController
         self.tableView.contentInset = UIEdgeInsetsMake(height, 0, 0, 0)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 40/255.0, green: 159/255.0, blue: 255/255.0, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        let gamesRef = FirebaseHelpers.getGamesReferences(sandpitKey)
+        
+        gamesRef.observeEventType(.Value, withBlock:
+            { snapshot in
+                var tempItems = [Game]()
+                
+                for game in snapshot.children
+                {
+                    tempItems.append(Game(snapshot: game as! FDataSnapshot))
+                }
+                
+                self.games = tempItems
+                self.tableView.reloadData()
+        })
     }
     
     override func viewDidLoad()
@@ -31,15 +49,16 @@ class GamesTableViewController: UITableViewController
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1
+        return games.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! GameTableViewCell
-        cell.playerOne.text = "Player One"
-        cell.playerTwo.text = "Player Two"
-        cell.scores.text = "21 - 15"
+        let game = games[indexPath.row]
+        cell.playerOne.text = game.playerOneName
+        cell.playerTwo.text = game.playerTwoName
+        cell.scores.text = "\(game.playerOneScore) - \(game.playerTwoScore)"
         
         return cell
     }
