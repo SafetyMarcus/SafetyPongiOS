@@ -95,11 +95,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GwU-o0-Myd">
-                                <rect key="frame" x="20" y="151" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhm-aB-YU5">
                                 <rect key="frame" x="20" y="369" width="113" height="35"/>
                                 <constraints>
@@ -136,6 +131,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GwU-o0-Myd">
+                                <rect key="frame" x="20" y="151" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -166,6 +166,14 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="New Game" id="3Xm-hZ-o8a"/>
+                    <connections>
+                        <outlet property="playerOneLabel" destination="IGT-zO-Wam" id="2Zc-55-WhC"/>
+                        <outlet property="playerOneText" destination="GwU-o0-Myd" id="y8U-gN-JRH"/>
+                        <outlet property="playerTwoLabel" destination="dhm-aB-YU5" id="q2m-cy-R0d"/>
+                        <outlet property="playerTwoText" destination="6zl-pp-5az" id="1lc-4N-wRG"/>
+                        <outlet property="s" destination="ueN-wb-pmp" id="hw9-R9-y8k"/>
+                        <outlet property="v" destination="pap-PF-HBf" id="s2r-Yg-pZW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAR-BW-rFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
