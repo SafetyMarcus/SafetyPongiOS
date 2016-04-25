@@ -43,6 +43,20 @@ class Game
         self.dateInMilliseconds = dateInMilliseconds
     }
     
+    init(snapshot : FDataSnapshot)
+    {
+        let data = snapshot.value as! [String : AnyObject]
+        playerOneId = data[Game.PLAYER_ONE_ID] as! String
+        playerTwoId = data[Game.PLAYER_TWO_ID] as! String
+        playerOneName = data[Game.PLAYER_ONE_NAME] as! String
+        playerTwoName = data[Game.PLAYER_TWO_NAME] as! String
+        playerOneScore = data[Game.PLAYER_ONE_SCORE] as! Int
+        playerTwoScore = data[Game.PLAYER_TWO_SCORE] as! Int
+        playerOneRatingBefore = data[Game.PLAYER_ONE_RATING_BEFORE] as! Int
+        playerTwoRatingBefore = data[Game.PLAYER_TWO_RATING_BEFORE] as! Int
+        dateInMilliseconds = data[Game.DATE_IN_MILLISECONDS] as! Double
+    }
+    
     func getDictionary() -> [String : AnyObject]
     {
         return [Game.PLAYER_ONE_ID : playerOneId, Game.PLAYER_TWO_ID : playerTwoId, Game.PLAYER_ONE_NAME : playerOneName, Game.PLAYER_TWO_NAME : playerTwoName, Game.PLAYER_ONE_SCORE : playerOneScore, Game.PLAYER_TWO_SCORE : playerTwoScore, Game.PLAYER_ONE_RATING_BEFORE : playerOneRatingBefore, Game.PLAYER_TWO_RATING_BEFORE : playerTwoRatingBefore, Game.DATE_IN_MILLISECONDS : dateInMilliseconds]

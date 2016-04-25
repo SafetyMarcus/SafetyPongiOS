@@ -22,6 +22,13 @@ class League
         self.password = name
     }
     
+    init(snapshot : FDataSnapshot)
+    {
+        let data = snapshot.value as! [String : AnyObject]
+        name = data[League.NAME] as! String
+        password = data[League.PASSWORD] as! String
+    }
+    
     func getDictionary() -> [String : String]
     {
         return [League.NAME : name, League.PASSWORD : password]

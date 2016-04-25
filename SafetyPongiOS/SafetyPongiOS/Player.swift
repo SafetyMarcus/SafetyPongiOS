@@ -22,6 +22,13 @@ class Player
         self.rating = rating
     }
     
+    init(snapshot : FDataSnapshot)
+    {
+        let data = snapshot.value as! [String : AnyObject]
+        name = data[Player.NAME] as! String
+        rating = data[Player.RATING] as! Int
+    }
+    
     func getDictionary() -> [String : AnyObject]
     {
         return [Player.NAME : name, Player.RATING : rating]
