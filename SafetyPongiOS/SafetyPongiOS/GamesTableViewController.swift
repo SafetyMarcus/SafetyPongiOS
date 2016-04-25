@@ -16,7 +16,8 @@ class GamesTableViewController: UITableViewController
         super.viewWillAppear(animated)
         let height = UIApplication.sharedApplication().statusBarFrame.height
         self.tableView.contentInset = UIEdgeInsetsMake(height, 0, 0, 0)
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 40/255.0, green: 159/255.0, blue: 215/255.0, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 40/255.0, green: 159/255.0, blue: 255/255.0, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
     
     override func viewDidLoad()
@@ -37,9 +38,8 @@ class GamesTableViewController: UITableViewController
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! GameTableViewCell
         cell.playerOne.text = "Player One"
-        cell.playerOneScore.text = "21"
         cell.playerTwo.text = "Player Two"
-        cell.playerTwoScore.text = "15"
+        cell.scores.text = "21 - 15"
         
         return cell
     }

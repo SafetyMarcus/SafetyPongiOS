@@ -25,6 +25,7 @@
 		EA80136C1CBD25D200C2B0E8 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA80136B1CBD25D200C2B0E8 /* PlayerTableViewCell.xib */; };
 		EA80136E1CBD2BEC00C2B0E8 /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA80136D1CBD2BEC00C2B0E8 /* GameTableViewCell.xib */; };
 		EA8013701CBD2D3000C2B0E8 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA80136F1CBD2D3000C2B0E8 /* GameTableViewCell.swift */; };
+		EAEB80AD1CCAE02900A84BE3 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB80AC1CCAE02900A84BE3 /* NewGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		EA80136B1CBD25D200C2B0E8 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
 		EA80136D1CBD2BEC00C2B0E8 /* GameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
 		EA80136F1CBD2D3000C2B0E8 /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		EAEB80AC1CCAE02900A84BE3 /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				EA8013661CBD1DCB00C2B0E8 /* GamesTableViewController.swift */,
 				EA8013681CBD23E100C2B0E8 /* PlayerTableViewCell.swift */,
 				EA80136F1CBD2D3000C2B0E8 /* GameTableViewCell.swift */,
+				EAEB80AC1CCAE02900A84BE3 /* NewGameViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				EA8013341CBD198600C2B0E8 /* AppDelegate.swift in Sources */,
 				038570341CC31E4F002047DC /* FirebaseHelpers.swift in Sources */,
 				EA8013671CBD1DCB00C2B0E8 /* GamesTableViewController.swift in Sources */,
+				EAEB80AD1CCAE02900A84BE3 /* NewGameViewController.swift in Sources */,
 				0371FF3C1CCCA197002ACDA8 /* Player.swift in Sources */,
 				038570391CC31FDF002047DC /* FirebaseConstants.swift in Sources */,
 			);
