@@ -20,13 +20,17 @@ class NewGameViewController: UIViewController
     @IBOutlet weak var v: UILabel!
     @IBOutlet weak var s: UILabel!
     
+    @IBOutlet weak var fight: UIButton!
+    
     var displacement: CGFloat!
     
     override func viewWillAppear(animated: Bool)
     {
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 40/255.0, green: 159/255.0, blue: 255/255.0, alpha: 1)
+        let blue = UIColor(red: 40/255.0, green: 159/255.0, blue: 255/255.0, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = blue
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        fight.backgroundColor = blue
         
         displacement = self.view.bounds.width/10
         
@@ -44,6 +48,8 @@ class NewGameViewController: UIViewController
         v.frame.origin.x -= displacement
         s.alpha = 0
         s.frame.origin.x += displacement
+        
+        fight.alpha = 0
     }
     
     override func viewDidAppear(animated: Bool)
@@ -51,6 +57,7 @@ class NewGameViewController: UIViewController
         animatePlayer(self.playerOneLabel, playerText: self.playerOneText, delay: 0)
         animateVS()
         animatePlayer(self.playerTwoLabel, playerText: self.playerTwoText, delay: 1.2)
+        animateFight()
     }
     
     func animatePlayer(playerLabel: UILabel, playerText: UITextField, delay: NSTimeInterval)
@@ -71,5 +78,14 @@ class NewGameViewController: UIViewController
             self.s.alpha = 1
             self.s.frame.origin.x -= self.displacement
             }, completion: nil)
+    }
+    
+    func animateFight()
+    {
+        UIView.animateWithDuration(0.6, delay: 1.6, usingSpringWithDamping: 0.2, initialSpringVelocity: 5, options: .CurveEaseOut, animations: {
+            self.fight.alpha = 1
+            let bounds = self.fight.bounds
+            self.fight.bounds = CGRectMake(bounds.origin.x - 20, bounds.origin.y, bounds.size.width + 60, bounds.size.height)
+        }, completion: nil)
     }
 }
