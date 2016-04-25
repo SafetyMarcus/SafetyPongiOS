@@ -23,7 +23,6 @@ class GamesTableViewController: UITableViewController
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         let gamesRef = FirebaseHelpers.getGamesReferences(sandpitKey)
-        
         gamesRef.observeEventType(.Value, withBlock:
             { snapshot in
                 var tempItems = [Game]()
