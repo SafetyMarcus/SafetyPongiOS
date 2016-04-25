@@ -56,13 +56,13 @@ class NewGameViewController: UIViewController
     {
         animatePlayer(self.playerOneLabel, playerText: self.playerOneText, delay: 0)
         animateVS()
-        animatePlayer(self.playerTwoLabel, playerText: self.playerTwoText, delay: 1.2)
+        animatePlayer(self.playerTwoLabel, playerText: self.playerTwoText, delay: 1)
         animateFight()
     }
     
     func animatePlayer(playerLabel: UILabel, playerText: UITextField, delay: NSTimeInterval)
     {
-        UIView.animateWithDuration(0.8, delay: delay, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(0.6, delay: delay, options: .CurveEaseOut, animations: {
             playerLabel.alpha = 1
             playerLabel.frame.origin.x -= self.displacement
             playerText.alpha = 1
@@ -72,7 +72,7 @@ class NewGameViewController: UIViewController
     
     func animateVS()
     {
-        UIView.animateWithDuration(0.4, delay: 0.8, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(0.4, delay: 0.6, options: .CurveEaseOut, animations: {
             self.v.alpha = 1
             self.v.frame.origin.x += self.displacement
             self.s.alpha = 1
@@ -82,8 +82,10 @@ class NewGameViewController: UIViewController
     
     func animateFight()
     {
-        UIView.animateWithDuration(0.6, delay: 1.6, usingSpringWithDamping: 0.2, initialSpringVelocity: 5, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(0, delay: 1.6, options: .CurveLinear, animations: {
             self.fight.alpha = 1
+        }, completion: nil)
+        UIView.animateWithDuration(0.6, delay: 1.6, usingSpringWithDamping: 0.2, initialSpringVelocity: 5, options: .CurveEaseOut, animations: {
             let bounds = self.fight.bounds
             self.fight.bounds = CGRectMake(bounds.origin.x - 20, bounds.origin.y, bounds.size.width + 60, bounds.size.height)
         }, completion: nil)
