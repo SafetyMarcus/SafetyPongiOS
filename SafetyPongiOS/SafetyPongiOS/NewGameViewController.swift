@@ -50,6 +50,7 @@ class NewGameViewController: UIViewController
         s.frame.origin.x += displacement
         
         fight.alpha = 0
+        fight.addTarget(nil, action: #selector(fightClicked), forControlEvents: .TouchUpInside)
     }
     
     override func viewDidAppear(animated: Bool)
@@ -89,5 +90,10 @@ class NewGameViewController: UIViewController
             let bounds = self.fight.bounds
             self.fight.bounds = CGRectMake(bounds.origin.x - 20, bounds.origin.y, bounds.size.width + 60, bounds.size.height)
         }, completion: nil)
+    }
+    
+    func fightClicked()
+    {
+        //Testing
     }
 }

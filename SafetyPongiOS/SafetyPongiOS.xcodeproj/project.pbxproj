@@ -102,14 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0385703A1CC321A9002047DC /* models */ = {
+		0385703A1CC321A9002047DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				0371FF391CCC9E75002ACDA8 /* League.swift */,
 				0371FF3B1CCCA197002ACDA8 /* Player.swift */,
 				0371FF3D1CCCA1E6002ACDA8 /* Game.swift */,
 			);
-			name = models;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		6A149F3F8B3AC6AE8D3BE0DB /* Frameworks */ = {
@@ -154,7 +154,7 @@
 		EA8013321CBD198600C2B0E8 /* SafetyPongiOS */ = {
 			isa = PBXGroup;
 			children = (
-				0385703A1CC321A9002047DC /* models */,
+				0385703A1CC321A9002047DC /* Models */,
 				EA80136A1CBD25BB00C2B0E8 /* XIBs */,
 				EA8013631CBD1D4600C2B0E8 /* ViewControllers */,
 				EA8013331CBD198600C2B0E8 /* AppDelegate.swift */,
