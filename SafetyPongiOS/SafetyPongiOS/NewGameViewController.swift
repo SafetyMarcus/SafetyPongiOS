@@ -53,6 +53,12 @@ class NewGameViewController: UIViewController
         fight.addTarget(nil, action: #selector(fightClicked), forControlEvents: .TouchUpInside)
     }
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
     override func viewDidAppear(animated: Bool)
     {
         animatePlayer(self.playerOneLabel, playerText: self.playerOneText, delay: 0)
