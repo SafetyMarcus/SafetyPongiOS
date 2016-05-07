@@ -13,6 +13,7 @@
 		0371FF3E1CCCA1E6002ACDA8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371FF3D1CCCA1E6002ACDA8 /* Game.swift */; };
 		038570341CC31E4F002047DC /* FirebaseHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038570331CC31E4F002047DC /* FirebaseHelpers.swift */; };
 		038570391CC31FDF002047DC /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038570381CC31FDF002047DC /* FirebaseConstants.swift */; };
+		EA0DDC551CDDA7CC002171C5 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0DDC541CDDA7CC002171C5 /* KeyboardExtension.swift */; };
 		EA8013341CBD198600C2B0E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8013331CBD198600C2B0E8 /* AppDelegate.swift */; };
 		EA80133B1CBD198600C2B0E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8013391CBD198600C2B0E8 /* Main.storyboard */; };
 		EA80133D1CBD198600C2B0E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA80133C1CBD198600C2B0E8 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		875744A1095B94D53C3A363C /* Pods-SafetyPongiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafetyPongiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SafetyPongiOS/Pods-SafetyPongiOS.release.xcconfig"; sourceTree = "<group>"; };
 		CE0EEEEA50ADAA7FA6F16639 /* Pods-SafetyPongiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafetyPongiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SafetyPongiOS/Pods-SafetyPongiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E99F67A9C18CB891DB784692 /* libPods-SafetyPongiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SafetyPongiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0DDC541CDDA7CC002171C5 /* KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		EA8013301CBD198600C2B0E8 /* SafetyPongiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafetyPongiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8013331CBD198600C2B0E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA80133A1CBD198600C2B0E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		EA8013321CBD198600C2B0E8 /* SafetyPongiOS */ = {
 			isa = PBXGroup;
 			children = (
+				EA0DDC541CDDA7CC002171C5 /* KeyboardExtension.swift */,
 				0385703A1CC321A9002047DC /* Models */,
 				EA80136A1CBD25BB00C2B0E8 /* XIBs */,
 				EA8013631CBD1D4600C2B0E8 /* ViewControllers */,
@@ -397,6 +400,7 @@
 				0371FF3E1CCCA1E6002ACDA8 /* Game.swift in Sources */,
 				EA8013651CBD1D5C00C2B0E8 /* PlayersTableViewController.swift in Sources */,
 				0371FF3A1CCC9E75002ACDA8 /* League.swift in Sources */,
+				EA0DDC551CDDA7CC002171C5 /* KeyboardExtension.swift in Sources */,
 				EA8013691CBD23E100C2B0E8 /* PlayerTableViewCell.swift in Sources */,
 				EA8013341CBD198600C2B0E8 /* AppDelegate.swift in Sources */,
 				038570341CC31E4F002047DC /* FirebaseHelpers.swift in Sources */,
