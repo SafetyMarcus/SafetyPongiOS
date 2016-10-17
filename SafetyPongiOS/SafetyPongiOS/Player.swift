@@ -31,6 +31,6 @@ class Player
     
     func getDictionary() -> [String : AnyObject]
     {
-        return [Player.NAME : name, Player.RATING : rating]
+        return [Player.NAME : name as AnyObject, Player.RATING : rating as AnyObject]
     }
 }

@@ -15,21 +15,21 @@ class FirebaseHelpers
         return Firebase(url: FirebaseConstants.FIREBASE_PATH)
     }
     
-    static func savePlayer(leagueKey : String, key : String, player : Player)
+    static func savePlayer(_ leagueKey : String, key : String, player : Player)
     {
-        let safetyPong = Firebase(url: FirebaseConstants.FIREBASE_PATH + "/" + FirebaseConstants.PLAYERS).childByAppendingPath(leagueKey).childByAppendingPath(key)
-        safetyPong.setValue(player.getDictionary())
+        let safetyPong = Firebase(url: FirebaseConstants.FIREBASE_PATH + "/" + FirebaseConstants.PLAYERS).child(byAppendingPath: leagueKey).child(byAppendingPath: key)
+        safetyPong?.setValue(player.getDictionary())
     }
     
-    static func saveGame(leagueKey : String, key : String, game : Game)
+    static func saveGame(_ leagueKey : String, key : String, game : Game)
     {
-        let safetyPong = Firebase(url: FirebaseConstants.FIREBASE_PATH + "/" + FirebaseConstants.GAMES).childByAppendingPath(leagueKey).childByAppendingPath(key)
-        safetyPong.setValue(game.getDictionary())
+        let safetyPong = Firebase(url: FirebaseConstants.FIREBASE_PATH + "/" + FirebaseConstants.GAMES).child(byAppendingPath: leagueKey).child(byAppendingPath: key)
+        safetyPong?.setValue(game.getDictionary())
     }
     
-    static func createLeague(key : String, leagueName : String, password : String)
+    static func createLeague(_ key : String, leagueName : String, password : String)
     {
-        let leagueRef = Firebase(url: FirebaseConstants.FIREBASE_PATH + "/" + FirebaseConstants.LEAGUES).childByAppendingPath(key)
+        let leagueRef = Firebase(url: FirebaseConstants.FIREBASE_PATH + "/" + FirebaseConstants.LEAGUES).child(byAppendingPath: key)
         
 //        if leagueRef.authData == nil
 //        {
@@ -37,7 +37,7 @@ class FirebaseHelpers
 //        }
         
         let league = League(name: leagueName, password: password)
-        leagueRef.setValue(league.getDictionary())
+        leagueRef?.setValue(league.getDictionary())
     
         // Set owner role
 //        let firebase = Firebase(url: FirebaseConstants.FIREBASE_PATH)
@@ -48,39 +48,39 @@ class FirebaseHelpers
 //        firebase.childByAppendingPath(FirebaseConstants.USERS).childByAppendingPath(authId).childByAppendingPath(FirebaseConstants.LEAGUES).childByAppendingPath(key).setValue(leagueName)
     }
     
-    static func addUserToLeague(leagueKey : String, leagueName : String, role : String)
+    static func addUserToLeague(_ leagueKey : String, leagueName : String, role : String)
     {
         let firebase = Firebase(url: FirebaseConstants.FIREBASE_PATH)
         
-        if firebase.authData == nil
+        if firebase?.authData == nil
         {
             return
         }
         
-        let authId = firebase.authData.uid
-        Firebase(url: FirebaseConstants.FIREBASE_PATH).childByAppendingPath(FirebaseConstants.LEAGUES).childByAppendingPath(leagueKey).childByAppendingPath(FirebaseConstants.ROLES).childByAppendingPath(authId).setValue(role)
+        let authId = firebase?.authData.uid
+        Firebase(url: FirebaseConstants.FIREBASE_PATH).child(byAppendingPath: FirebaseConstants.LEAGUES).child(byAppendingPath: leagueKey).child(byAppendingPath: FirebaseConstants.ROLES).child(byAppendingPath: authId).setValue(role)
     
-        firebase.childByAppendingPath(FirebaseConstants.USERS).childByAppendingPath(authId).childByAppendingPath(FirebaseConstants.LEAGUES).childByAppendingPath(leagueKey).setValue(leagueName)
+        firebase?.child(byAppendingPath: FirebaseConstants.USERS).child(byAppendingPath: authId).child(byAppendingPath: FirebaseConstants.LEAGUES).child(byAppendingPath: leagueKey).setValue(leagueName)
     }
     
-    static func updateUsersDetails(authData : FAuthData!)
+    static func updateUsersDetails(_ authData : FAuthData!)
     {
         if authData == nil
         {
             return
         }
         
-        let firebase = Firebase(url: FirebaseConstants.FIREBASE_PATH).childByAppendingPath(FirebaseConstants.USERS).childByAppendingPath(authData.uid)
-        firebase.childByAppendingPath(FirebaseConstants.NAME).setValue(authData.providerData["displayName"])
-        firebase.childByAppendingPath(FirebaseConstants.IMAGE).setValue(authData.providerData["profileImageURL"])
+        let firebase = Firebase(url: FirebaseConstants.FIREBASE_PATH).child(byAppendingPath: FirebaseConstants.USERS).child(byAppendingPath: authData.uid)
+        firebase?.child(byAppendingPath: FirebaseConstants.NAME).setValue(authData.providerData["displayName"])
+        firebase?.child(byAppendingPath: FirebaseConstants.IMAGE).setValue(authData.providerData["profileImageURL"])
     }
     
-    static func getPlayerReferences(leagueKey : String) -> Firebase
+    static func getPlayerReferences(_ leagueKey : String) -> Firebase
     {
         return Firebase(url: FirebaseConstants.FIREBASE_PATH + "/" + FirebaseConstants.PLAYERS + "/" + leagueKey)
     }
     
-    static func getGamesReferences(leagueKey : String) -> Firebase
+    static func getGamesReferences(_ leagueKey : String) -> Firebase
     {
         return Firebase(url: FirebaseConstants.FIREBASE_PATH + "/" + FirebaseConstants.GAMES + "/" + leagueKey)
     }
@@ -89,12 +89,12 @@ class FirebaseHelpers
     {
         let ref = Firebase(url: FirebaseConstants.FIREBASE_PATH)
         
-        if ref.authData == nil
+        if ref?.authData == nil
         {
-            return ref
+            return ref!
         }
         
-        return ref.childByAppendingPath(FirebaseConstants.USERS).childByAppendingPath(ref.authData.uid).childByAppendingPath(FirebaseConstants.LEAGUES)
+        return ref!.child(byAppendingPath: FirebaseConstants.USERS).child(byAppendingPath: ref!.authData.uid).child(byAppendingPath: FirebaseConstants.LEAGUES)
     }
     
     static func getAppRef() -> Firebase

@@ -59,6 +59,6 @@ class Game
     
     func getDictionary() -> [String : AnyObject]
     {
-        return [Game.PLAYER_ONE_ID : playerOneId, Game.PLAYER_TWO_ID : playerTwoId, Game.PLAYER_ONE_NAME : playerOneName, Game.PLAYER_TWO_NAME : playerTwoName, Game.PLAYER_ONE_SCORE : playerOneScore, Game.PLAYER_TWO_SCORE : playerTwoScore, Game.PLAYER_ONE_RATING_BEFORE : playerOneRatingBefore, Game.PLAYER_TWO_RATING_BEFORE : playerTwoRatingBefore, Game.DATE_IN_MILLISECONDS : dateInMilliseconds]
+        return [Game.PLAYER_ONE_ID : playerOneId as AnyObject, Game.PLAYER_TWO_ID : playerTwoId as AnyObject, Game.PLAYER_ONE_NAME : playerOneName as AnyObject, Game.PLAYER_TWO_NAME : playerTwoName as AnyObject, Game.PLAYER_ONE_SCORE : playerOneScore as AnyObject, Game.PLAYER_TWO_SCORE : playerTwoScore as AnyObject, Game.PLAYER_ONE_RATING_BEFORE : playerOneRatingBefore as AnyObject, Game.PLAYER_TWO_RATING_BEFORE : playerTwoRatingBefore as AnyObject, Game.DATE_IN_MILLISECONDS : dateInMilliseconds as AnyObject]
     }
 }

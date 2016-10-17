@@ -14,20 +14,20 @@ class GamesTableViewController: UITableViewController
     let sandpitKey = "da550478-0119-4e0c-b892-29f60e932293"
     var games = [Game]()
     
-    override func viewWillAppear(animated: Bool)
+    override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
-        let height = UIApplication.sharedApplication().statusBarFrame.height
+        let height = UIApplication.shared.statusBarFrame.height
         self.tableView.contentInset = UIEdgeInsetsMake(height, 0, 0, 0)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 40/255.0, green: 159/255.0, blue: 255/255.0, alpha: 1)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         let gamesRef = FirebaseHelpers.getGamesReferences(sandpitKey)
-        gamesRef.observeEventType(.Value, withBlock:
+        gamesRef.observe(.value, with:
             { snapshot in
                 var tempItems = [Game]()
                 
-                for game in snapshot.children
+                for game in (snapshot?.children)!
                 {
                     tempItems.append(Game(snapshot: game as! FDataSnapshot))
                 }
@@ -40,21 +40,21 @@ class GamesTableViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        tableView.registerNib(UINib(nibName: "GameTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        self.edgesForExtendedLayout = UIRectEdge.None
+        tableView.register(UINib(nibName: "GameTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        self.edgesForExtendedLayout = UIRectEdge()
         self.extendedLayoutIncludesOpaqueBars = false
         self.automaticallyAdjustsScrollViewInsets = false
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return games.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! GameTableViewCell
-        let game = games[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GameTableViewCell
+        let game = games[(indexPath as NSIndexPath).row]
         cell.playerOne.text = game.playerOneName
         cell.playerTwo.text = game.playerTwoName
         cell.scores.text = "\(game.playerOneScore) - \(game.playerTwoScore)"
