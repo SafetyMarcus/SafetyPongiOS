@@ -32,7 +32,7 @@ class NewGameViewController: UIViewController
         self.navigationController?.navigationBar.tintColor = UIColor.white
         fight.backgroundColor = blue
         
-        displacement = self.view.bounds.width/10
+        displacement = self.view.bounds.width/90
         
         playerOneLabel.alpha = 0
         playerOneLabel.frame.origin.x += displacement
